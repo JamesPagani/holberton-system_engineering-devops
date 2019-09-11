@@ -1,4 +1,2 @@
 #!/bin/bash
-# Determines the type of the file called "iamafile"... weird name, btw
-
 file /tmp/iamafile
