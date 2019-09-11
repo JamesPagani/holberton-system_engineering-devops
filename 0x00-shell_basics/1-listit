@@ -1,4 +1,2 @@
 #!/bin/bash
-# Show the current directory contents
-
 ls
