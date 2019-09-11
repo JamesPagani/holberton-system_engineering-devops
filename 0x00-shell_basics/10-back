@@ -1,0 +1,4 @@
+#!/bin/bash
+# Return to the previously visited dir. Like using Ctrl-Z on Windows' File Explorer.
+
+cd -
