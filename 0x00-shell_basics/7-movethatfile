@@ -1,0 +1,4 @@
+#!/bin/bash
+# Moves a (already created) file called "betty" to the previously created "holberton" dir..
+
+mv /tmp/betty /tmp/holberton

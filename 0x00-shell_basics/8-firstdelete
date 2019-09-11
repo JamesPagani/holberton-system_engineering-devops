@@ -1,0 +1,4 @@
+#!/bin/bash
+# Deleting the previously created file "betty" in the dir. "holberton"
+
+rm /tmp/holberton/betty
