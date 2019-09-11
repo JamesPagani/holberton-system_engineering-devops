@@ -1,0 +1,4 @@
+#!/bin/bash
+# Prints a more detailed version of the current directory's contents
+
+ls -l

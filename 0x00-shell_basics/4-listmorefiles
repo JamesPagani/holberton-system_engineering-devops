@@ -1,0 +1,4 @@
+#!/bin/bash
+# Lists the files of the current dir., including hidden ones, in a detailed format
+
+ls -la

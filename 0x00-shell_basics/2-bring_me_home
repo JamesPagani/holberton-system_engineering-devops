@@ -1,0 +1,4 @@
+#!/bin/bash
+# Brings you back to your home dir.
+
+cd

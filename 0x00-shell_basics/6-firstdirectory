@@ -1,0 +1,7 @@
+#!/bin/bash
+# Makes a directory in the /tmp/ dir called "holberton" (path: /tmp/holberton/)
+
+cd
+cd /tmp
+mkdir holberton
+ls
