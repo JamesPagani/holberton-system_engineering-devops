@@ -1,4 +1,2 @@
 #!/bin/bash
-# Lists the contents of the current directory, the parent of the current directory and the /boot directory
-
 ls -la . .. /boot
