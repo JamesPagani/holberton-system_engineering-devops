@@ -1,0 +1,2 @@
+#!/bin/bash
+cat test6 | head -n -2 | tail -n 1
