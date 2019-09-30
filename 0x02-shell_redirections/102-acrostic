@@ -1,2 +1,2 @@
-#/bin/bash
+#!/bin/bash
 cat acrostic | cut -d " " -f 1 | tr -d '\n'[[:lower:]][[:punct:]] | cut -f 1-
