@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Prints "Holberton School" 10 times using a UNTIL loop
+I=0
+until [ $I -eq 10 ]
+do
+	echo "Holberton School"
+	let I+=1
+done
