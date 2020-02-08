@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Print "Holberton School" 10 times. Chinese number superstition included.
+I=1
+while [ $I -le 10 ]
+do
+	if [ $I == 4 ]
+	then
+		echo "bad luck"
+	elif [ $I == 8 ]
+	then
+		echo "good luck"
+	else
+		echo "Holberton School"
+	fi
+	let I+=1
+done

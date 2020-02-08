@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Numbers from 1 to 20 with bad luck numbers in some countries.
+I=1
+while [ $I -le 20 ]
+do
+	case $I in
+	     4)
+		echo "bad luck from China" ;;
+	     9)
+		echo "bad luck from Japan" ;;
+	     17)
+		echo "bad luck from Italy" ;;
+             *)
+		echo $I
+	esac
+	let I+=1
+done

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Print "Holberton School" 10 times and on the 9th loop print "Hi"
+I=1
+while [ $I -le 10 ]
+do
+	echo "Holberton School"
+	if [ $I == 9 ]
+	then
+		echo "Hi"
+	fi
+	let I+=1
+done
