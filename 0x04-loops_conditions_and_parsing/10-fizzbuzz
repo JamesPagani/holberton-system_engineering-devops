@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Your FizzBuzz test implemented in Bash script.
+for (( I=1; I<=100; I++ ))
+do
+    if [ $(( I % 3 == 0 )) == 1 ] && [ $(( I % 5 == 0 )) == 1 ]
+    then
+        echo "FizzBuzz"
+    elif [ $(( I % 3 == 0 )) == 1 ]
+    then
+        echo "Fizz"
+    elif [ $(( I % 5 == 0 )) == 1 ]
+    then
+        echo "Buzz"
+    else
+        echo "$I"
+    fi
+done
