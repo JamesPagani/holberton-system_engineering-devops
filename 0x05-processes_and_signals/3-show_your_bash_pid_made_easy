@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Show all bash processes, the easy way
+
+pgrep -l bash

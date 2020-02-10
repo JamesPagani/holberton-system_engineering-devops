@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Shows a list of all current running processes with respective hierarchy
+
+ps fu -e

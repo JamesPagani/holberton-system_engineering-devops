@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Shows a list of all current running processes with respective hierarchy
+# shellcheck disable=SC2009
+
+ps fu -e | grep bash
