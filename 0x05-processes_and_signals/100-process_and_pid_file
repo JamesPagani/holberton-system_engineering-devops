@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Creates a file with this process' PID and deletes it when killed.
+
+sudo touch /var/run/holbertonscript.pid
+sudo bash -c 'echo $$ > /var/run/holbertonscript.pid'
+
+trap 'echo "Y U no love me?!"' SIGINT
+trap 'echo "I hate the kill command"; sudo rm /var/run/holbertonscript.pid; exit' SIGTERM
+trap 'sudo rm /var/run/holbertonscript.pid; exit' SIGQUIT
+
+while true
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
