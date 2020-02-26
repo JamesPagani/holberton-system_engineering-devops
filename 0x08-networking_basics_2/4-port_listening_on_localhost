@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Use Netcat (nc) to listen to whatever comes from localhost:98
+
+nc -l localhost 98
