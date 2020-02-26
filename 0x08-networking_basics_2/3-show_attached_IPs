@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Shows all IP addresses attached to the current machine
+
+ifconfig | grep "inet addr" | cut -d ":" -f 2 | cut -d " " -f 1
