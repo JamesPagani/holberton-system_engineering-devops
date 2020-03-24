@@ -1,0 +1,6 @@
+Host "ubuntu@35.237.132.126"
+    HostName 35.237.132.126
+    User ubuntu
+    PasswordAuthentication no
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/holberton
