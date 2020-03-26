@@ -4,4 +4,5 @@
 
 sudo apt-get -y install nginx
 echo "Holberton School" | sudo tee /var/www/html/index.nginx-debial.html > /dev/null
+sudo service nginx start
 curl 127.0.0.1
