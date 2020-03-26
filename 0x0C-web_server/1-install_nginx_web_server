@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Installs and configures nginx
+# It also displays "Holberton School" when you do an HTTP GET request
+
+sudo apt-get -y install nginx
+echo "Holberton School" | sudo tee /var/www/html/index.nginx-debial.html > /dev/null
+curl 127.0.0.1
