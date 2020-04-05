@@ -11,3 +11,4 @@ sudo sed -i '/listen 80 default_server;/a //trewrite ^/redirect_me https://www.y
 echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html > /dev/null
 sudo sed -i '/listen 80 default_server;/a //terror_page 404 /404.html;' /etc/nginx/sites-available/default
 sudo service nginx restart
+curl 127.0.0.1/forsenE
