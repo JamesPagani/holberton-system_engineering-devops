@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Installs and configures nginx
+# It also displays "Holberton School" when you do an HTTP GET request
+
+sudo apt-get -y update
+sudo apt-get -y install nginx
+echo "Holberton School" | sudo tee /var/www/html/index.html > /dev/null
+sudo service nginx start
+curl 127.0.0.1
+sudo sed -i '/listen 80 default_server;/a rewrite ^/redirect_me https://www.youtube.com/watch?v=-GEHyAfV4OI permanent;' /etc/nginx/sites-available/default
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html > /dev/null
+sudo sed -i '/listen 80 default_server;/a error_page 404 /404.html;' /etc/nginx/sites-available/default
+sudo sed -i '/listen 80 default_server;/a add_header X-Served-By $HOSTNAME;' /etc/nginx/sites-available/default
+sudo service nginx restart
+curl 127.0.0.1/forsenE
+curl -sI 127.0.0.1 | grep X-Served-By
