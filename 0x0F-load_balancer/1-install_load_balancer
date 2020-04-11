@@ -13,3 +13,4 @@ backend holberton
 	server web-01 35.237.132.126:80 check
 	server web-02 35.227.124.124:80 check
 """ | sudo tee -a /etc/haproxy/haproxy.cfg > /dev/null
+sudo service haproxy start
