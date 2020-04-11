@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Install HAproxy to a server to turn it into a *Load Balancer* server
+
+sudo apt-get update
+sudo apt-get -y install haproxy
+echo """
+frontend hbnb
+	bind *:80
+	default_backend holberton
+
+backend holberton
+	balance roundrobin
+	server web-01 35.237.132.126:80 check
+	server web-02 35.227.124.124:80 check
+""" | sudo tee -a /etc/haproxy/haproxy.cfg > /dev/null
