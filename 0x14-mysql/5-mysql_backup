@@ -4,5 +4,5 @@
 
 FILE_DATE=$(date +%d-%y-%Y)
 
-mysqldump -u root -p "$1" --opt --all-databases > backup.sql
+mysqldump -uroot -p"$1" --opt --all-databases > backup.sql
 tar -czf "$FILE_DATE".tar.gz backup.sql
