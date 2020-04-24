@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Generates a backup of all MySQL (5.7) databases and compresses them to a tar.gz archive.
+# MySQL dump name: backup.sql | Archive name: [DAY]-[MONTH]-[YEAR].tar.gz
+
+FILE_DATE=$(date +%d-%y-%Y)
+
+mysqldump -u root -p "$1" --opt --all-databases > backup.sql
+tar -czf "$FILE_DATE".tar.gz backup.sql
