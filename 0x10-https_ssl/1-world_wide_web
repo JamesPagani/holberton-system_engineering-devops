@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Returns the info about a domain and, if given, a specific subdomain.
+# If no subdomain is passed, it will return information on the following subdomains:
+# www, lb-01, web-01 and web-02
+
+subdomain_info() {
+    # Expected arguments: subdomain, domain
+    dig "$1.$2" | grep -A1 'ANSWER SECTION' | tail -1 | awk '{print "is a " $4 " record and points to " $5}'
+}
+
+if [ -z $2 ]
+then
+    echo "The subdomain www $(subdomain_info www $1)"
+    echo "The subdomain lb-01 $(subdomain_info lb-01 $1)"
+    echo "The subdomain web-01 $(subdomain_info web-01 $1)"
+    echo "The subdomain web-02 $(subdomain_info web-02 $1)"
+else
+    echo "The subdomain $2 $(subdomain_info $2 $1)"
+fi
