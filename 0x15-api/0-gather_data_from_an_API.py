@@ -4,7 +4,6 @@ Given the ID of an employee, return its progress in his/her TODO list.
 """
 
 
-
 import requests
 from sys import argv
 
