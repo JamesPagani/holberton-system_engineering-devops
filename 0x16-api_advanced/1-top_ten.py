@@ -16,7 +16,8 @@ def top_ten(subreddit):
                              headers=headers)
 
     if subreddit.status_code != 200:
-        return None
+        print(None)
+        return
 
     sub_json = subreddit.json()
     hot_posts = sub_json.get("data", None).get("children", None)
