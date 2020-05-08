@@ -13,7 +13,8 @@ def number_of_subscribers(subreddit):
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
     headers = {'user-agent': 'web:0x16-0.how_many_subs:v0.1.0'}
 
-    subreddit = requests.get(url, allow_redirects=False, headers=headers).json()
+    subreddit = requests.get(url, allow_redirects=False,
+                             headers=headers).json()
     subs = subreddit.get("subscribers", 0)
 
     return subs
