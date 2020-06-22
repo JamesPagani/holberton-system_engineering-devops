@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-# Turns out, the default in sites-enabled tried to connect to port 8080!
-# Fix: Delete the default in .../sites-enabled/ and replace it with a symbolic link of the default file in .../sites-available
+# The configuration in sites enabled wasn't a symbolic link, make it so.
 
 sudo rm /etc/nginx/sites-enabled/default
 sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
