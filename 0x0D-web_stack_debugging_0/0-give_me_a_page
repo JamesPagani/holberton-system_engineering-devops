@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Turns out, Apache was not even running. Just start it and done. OMEGALUL
+sudo service apache2 start
