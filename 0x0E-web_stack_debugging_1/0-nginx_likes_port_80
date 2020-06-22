@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # The configuration in sites enabled wasn't a symbolic link, make it so.
-
 sudo rm /etc/nginx/sites-enabled/default
 sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo service nginx restart
