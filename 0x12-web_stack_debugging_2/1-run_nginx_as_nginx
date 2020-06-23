@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Creates a new user called 'nginx', which will have all necesary permissions required to run nginx.
+
+# Apache is running on the port I need. Not anymore.
+pkill apache2
+
+# Give 'nginx' the necesary access to the required files and folders used by nginx
+
+touch /run/nginx.pid
+setfacl -m u:nginx:rw -R /var/log/nginx/ /run/nginx.pid
+setfacl -m u:nginx:rx -R /etc/nginx/ /usr/sbin/nginx /etc/init.d/nginx
+
+# Non-Superusers can't open port 80. Modify the configuration so that nginx serves on port 8080 instead
+sed -i "s/listen [0-9]\{1,\}/listen 8080/" /etc/nginx/sites-available/default
+sed -i "s/listen \[::]\:[0-9]\{1,\}/listen [::]:8080/" /etc/nginx/sites-available/default
+
+sudo --user=nginx /usr/sbin/nginx
