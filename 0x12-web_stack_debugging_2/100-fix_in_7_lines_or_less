@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Creates a new user called 'nginx', which will have all necesary permissions required to run nginx. This variant has only 7 lines.
+pkill apache2
+touch /run/nginx.pid
+setfacl -m u:nginx:rwx -R /var/log/nginx/ /run/nginx.pid /etc/nginx
+setfacl -m u:nginx:rx -R /etc/nginx/ /usr/sbin/nginx /etc/init.d/nginx
+sudo --user=nginx /usr/sbin/nginx
