@@ -54,6 +54,7 @@ frontend holberton-https
 
 backend holberton-backend
 	balance roundrobin
+	redirect scheme https if !{ ssl_fc }
 	server web-01 35.237.132.126:80 check
 	server web-02 35.227.124.124:80 check
 
